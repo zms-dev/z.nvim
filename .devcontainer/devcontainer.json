@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+  "name": "DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "postCreateCommand": "sudo chown vscode /var/run/docker.sock",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.makefile-tools",
+        "bungcip.better-toml",
+        "EditorConfig.EditorConfig",
+        "github.vscode-github-actions",
+        "sumneko.lua",
+        "GitHub.vscode-pull-request-github",
+        "wayou.vscode-todo-highlight",
+        "enkia.tokyo-night",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker",
+        "rog2.luacheck",
+        "JohnnyMorganz.stylua",
+        "XadillaX.viml"
+      ]
+    }
+  }
+}
