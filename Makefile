@@ -16,7 +16,7 @@ fix:
 	stylua --color always lua/z
 
 lint:
-	luacheck .
+	luacheck lua/z
 
 workflows:
 	act -s GITHUB_TOKEN

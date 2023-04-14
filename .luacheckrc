@@ -12,5 +12,5 @@ self = false
 
 std = "luajit"
 files[".luacheckrc"].std = "+luacheckrc"
-files["**/*.lua"].std = "+nvim"
-files["**/*_spec.lua"].std = "+nvim+busted"
+files["lua/z/**/*.lua"].std = "+nvim"
+files["lua/z/**/*_spec.lua"].std = "+nvim+busted"
