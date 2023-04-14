@@ -1,0 +1,17 @@
+name: Stylua
+
+on: [push, pull_request]
+
+jobs:
+  stylua:
+    name: stylua
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check Format
+        uses: JohnnyMorganz/stylua-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --color always --check .
